@@ -10,8 +10,14 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const MAX_BYTES = 1048576;
-const EXPECTED_WIDTH = 1024;
-const EXPECTED_HEIGHT = 1024;
+// RULES.txt: the entry is "at most 1 MiB (1048576 bytes) and at most
+// 1024 by 1024 pixels" — AT MOST, not exactly. So the check is an
+// upper bound on each side, not an equality: a 680x1024 broadsheet
+// is legal, a 1024x1024 square is legal, anything wider or taller
+// than 1024 is not. (v6's main.ts enforced exactly 1024x1024, which
+// was stricter than the rules and blocked the broadsheet.)
+const MAX_WIDTH = 1024;
+const MAX_HEIGHT = 1024;
 
 function fail(message: string): never {
   throw new Error(`entry.png rejected: ${message}`);
@@ -27,8 +33,8 @@ function inspectPng(bytes: Buffer): { width: number; height: number } {
   }
   const width = bytes.readUInt32BE(16);
   const height = bytes.readUInt32BE(20);
-  if (width !== EXPECTED_WIDTH || height !== EXPECTED_HEIGHT) {
-    fail(`dimensions ${width}x${height}, expected 1024x1024`);
+  if (width < 1 || height < 1 || width > MAX_WIDTH || height > MAX_HEIGHT) {
+    fail(`dimensions ${width}x${height}, must be at most 1024x1024`);
   }
   return { width, height };
 }
