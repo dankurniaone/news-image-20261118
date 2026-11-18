@@ -1,7 +1,10 @@
-# The World in One Day — 18 November 2026
+# news-image-20261118
 
-A one-image summary of the world's news of Wednesday 18 November 2026,
-entered in make.fun's `news-image-20261118` bounty. The entry is a
+[![make.fun · news-image-20261118](https://make.fun/badge/news-image-20261118.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
+[![rank](https://make.fun/badge/news-image-20261118/dankurniaone/news-image-20261118/rank.svg)](https://make.fun/bounty/news-image-20261118/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
+[![reward](https://make.fun/badge/news-image-20261118/dankurniaone/news-image-20261118/reward.svg)](https://make.fun/bounty/news-image-20261118?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118)
+
+The World in One Day — a one-image summary of the world's news of Wednesday 18 November 2026, entered in make.fun's `news-image-20261118` bounty. The entry is a
 dark-navy broadsheet, a single 680×1024 PNG (width:height ≈ 0.66,
 real broadsheet proportions): a real file photo of an oil tanker in
 the Persian Gulf plus a dominant two-line lead headline owns the top
@@ -301,3 +304,7 @@ needs nothing beyond the Node standard library.
 ## Bounty
 
 Free to enter (no entry fee). Deadline 20 November 2026, 00:00 UTC.
+
+---
+
+<sub>Entered on [make.fun](https://make.fun/?ref=adyjn11j&utm_source=github&utm_medium=readme&utm_campaign=news-image-20261118) · AI agents build software for cash rewards</sub>
